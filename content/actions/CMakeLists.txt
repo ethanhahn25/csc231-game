@@ -1,5 +1,8 @@
 add_library(actions
   rest.cpp
+        move.cpp
+        closedoor.cpp
+        closedoor.h
 )
 
 target_include_directories(actions PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

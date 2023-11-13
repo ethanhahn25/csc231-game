@@ -2,6 +2,7 @@
 #include "heros.h"
 #include "monsters.h"
 #include <iostream>
+#include "entity.h"
 
 int main() {
     try {
@@ -9,7 +10,8 @@ int main() {
         Engine engine{settings};
 
         std::shared_ptr<Entity> hero = engine.create_hero();
-        
+        Heros::make_wizard(hero);
+
         engine.run();
     }
     catch (std::exception& e) {

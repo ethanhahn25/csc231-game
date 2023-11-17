@@ -3,6 +3,8 @@ add_library(actions
         move.cpp
         closedoor.cpp
         closedoor.h
+        opendoor.cpp
+        opendoor.h
 )
 
 target_include_directories(actions PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

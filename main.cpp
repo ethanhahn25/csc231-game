@@ -3,6 +3,7 @@
 #include "monsters.h"
 #include <iostream>
 #include "entity.h"
+#include "monsters.h"
 
 int main() {
     try {
@@ -11,6 +12,11 @@ int main() {
 
         std::shared_ptr<Entity> hero = engine.create_hero();
         Heros::make_wizard(hero);
+
+    for(int i = 0; i < 20; ++i){
+        std::shared_ptr<Entity> monster = engine.create_monster();
+        Monsters::make_orc_masked(monster);
+    }
 
         engine.run();
     }

@@ -1,7 +1,7 @@
 #include "rest.h"
-#include <iostream>
+#include "entity.h"
 
 Result Rest::perform(Engine& engine, std::shared_ptr<Entity> entity) {
-    std::cout << "Resting...\n";
+    entity->take_damage(-1);
     return success();
 }

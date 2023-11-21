@@ -4,12 +4,15 @@
 #include "Move.h"
 #include "rest.h"
 #include "closedoor.h"
+#include "staff.h"
 
 namespace Heros {
 
     void make_wizard(std::shared_ptr<Entity> entity){
         entity->set_sprite("wizard");
+        entity->set_max_health(20);
         entity->behavior = behavior;
+        entity->set_weapon(std::make_shared<Staff>(5));
     }
     std::unique_ptr<Action> behavior(Engine& engine, Entity& entity){
         std::string key = engine.input.get_last_keypress();

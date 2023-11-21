@@ -5,6 +5,8 @@ add_library(actions
         closedoor.h
         opendoor.cpp
         opendoor.h
+        attack.cpp
+        attack.h
 )
 
 target_include_directories(actions PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

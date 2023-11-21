@@ -9,11 +9,12 @@ Result Closedoor::perform(Engine& engine, std::shared_ptr<Entity> entity){
     std::vector<Vec> neighbors = engine.dungeon.neighbors(position);
 
     bool closed_any_doors = false;
-    for(Vec position : neighbors){
-        Tile& tile = engine.dungeon.get_tile(position);
+    for(Vec pos : neighbors){
+        Tile& tile = engine.dungeon.get_tile(pos);
         if(tile.has_door() && tile.door->is_open()){
             Door& door = *tile.door; //pointer -> object
-            tile.door->close();
+//            tile.door->close();
+            door.close();
             closed_any_doors = true;
         }
     }

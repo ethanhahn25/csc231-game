@@ -11,7 +11,7 @@ Result Opendoor::perform(Engine& engine, std::shared_ptr<Entity> entity){
     bool open_any_doors = false;
         Tile& tile = engine.dungeon.get_tile(position);
         if(tile.has_door() && !tile.door->is_open()){
-            Door& door = *tile.door; //pointer -> object
+            Door& door = *tile.door;
             door.open();
             open_any_doors = true;
         }

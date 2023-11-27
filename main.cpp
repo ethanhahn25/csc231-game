@@ -3,7 +3,6 @@
 #include "monsters.h"
 #include <iostream>
 #include "entity.h"
-#include "monsters.h"
 
 int main() {
     try {

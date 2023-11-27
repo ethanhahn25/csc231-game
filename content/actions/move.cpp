@@ -1,6 +1,7 @@
 #include "move.h"
 #include "rest.h"
 #include "opendoor.h"
+#include "attack.h"
 
 Move::Move(Vec direction)
     :direction{direction}{}
@@ -8,16 +9,16 @@ Move::Move(Vec direction)
 Result Move::perform(Engine& engine, std::shared_ptr<Entity> entity){
     Vec new_pos = entity->get_position() + direction;
     Tile& tile = engine.dungeon.get_tile(new_pos);
-    if(tile.is_wall() || tile.has_door()) {
+    if(tile.is_wall()) {
         return failure();
     }
     if(tile.has_entity()){
-        return alternative(Rest{});
+        return alternative(Attack(*tile.entity));
     }
     if(tile.has_door()){
         Door& door = *tile.door;
         if(!door.is_open()){
-            return alternative(Opendoor(new_pos));
+            return alternative(Opendoor(door)); //pass door object&
         }
     }
 
@@ -25,5 +26,5 @@ Result Move::perform(Engine& engine, std::shared_ptr<Entity> entity){
     entity->change_direction(direction);
     return success();
 }
-//kill entity on tiles not on team
+
 

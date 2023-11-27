@@ -2,10 +2,11 @@
 
 #include "action.h"
 #include "vec.h"
+#include "door.h"
 
 class Opendoor : public Action {
 public:
-    Opendoor(Vec);
+    Opendoor(Door&);
     Result perform(Engine& engine, std::shared_ptr<Entity> entity) override;
-    Vec position;
+    Door& door;
 };

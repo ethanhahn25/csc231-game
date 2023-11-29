@@ -5,6 +5,7 @@
 #include "rest.h"
 #include "closedoor.h"
 #include "staff.h"
+#include "mace.h"
 
 namespace Heros {
 

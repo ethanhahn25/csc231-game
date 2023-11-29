@@ -3,6 +3,7 @@
 #include "engine.h"
 #include "thrust.h"
 #include "events.h"
+#include "swing.h"
 
 Staff::Staff(int damage)
     :Weapon{"staff_red", damage}{}

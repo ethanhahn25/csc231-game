@@ -6,6 +6,9 @@
 #include "closedoor.h"
 #include "staff.h"
 #include "mace.h"
+#include "cast_lightning.h"
+#include "lightning.h"
+
 
 namespace Heros {
 
@@ -34,6 +37,9 @@ namespace Heros {
         }
         else if(key =="D"){
             return std::make_unique<Move>(Vec{1,0});
+        }
+        else if(key == "L"){
+            return std::make_unique<CastLightning>();
         }
 
         return nullptr;

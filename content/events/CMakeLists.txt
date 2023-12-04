@@ -8,6 +8,8 @@ add_library(events
         thrust.h
         swing.cpp
         swing.h
+        lightning.cpp
+        lightning.h
 )
 
 target_include_directories(events PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

@@ -10,6 +10,8 @@ add_library(events
         swing.h
         lightning.cpp
         lightning.h
+        audioevent.cpp
+        audioevent.h
 )
 
 target_include_directories(events PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

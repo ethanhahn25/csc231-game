@@ -9,7 +9,6 @@
 #include "cast_lightning.h"
 #include "lightning.h"
 
-
 namespace Heros {
 
     void make_wizard(std::shared_ptr<Entity> entity){

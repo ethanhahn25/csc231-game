@@ -5,12 +5,14 @@
 #include "wander.h"
 #include "engine.h"
 #include "move.h"
+#include "mace.h"
 
 namespace Monsters {
     void make_orc_masked(std::shared_ptr<Entity> monster) {
         monster->set_sprite("orc_masked");
         monster->set_max_health(10);
         monster->behavior = behavior;
+        monster->set_weapon(std::make_shared<Mace>(3));
 }
 std::unique_ptr<Action> behavior(Engine& engine, Entity& entity) {
     if(engine.hero && entity.is_visible()){

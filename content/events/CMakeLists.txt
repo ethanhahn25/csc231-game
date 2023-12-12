@@ -12,6 +12,10 @@ add_library(events
         lightning.h
         audioevent.cpp
         audioevent.h
+        fire.cpp
+        fire.h
+        fireball.cpp
+        fireball.h
 )
 
 target_include_directories(events PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

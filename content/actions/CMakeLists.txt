@@ -9,6 +9,8 @@ add_library(actions
         attack.h
         cast_lightning.cpp
         cast_lightning.h
+        projectile.cpp
+        projectile.h
 )
 
 target_include_directories(actions PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

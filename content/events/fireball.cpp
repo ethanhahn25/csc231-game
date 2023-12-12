@@ -6,12 +6,10 @@
 #include "hit.h"
 
 Fireball::Fireball(Sprite& sprite, Vec direction, int damage, Vec start_position, Vec end_position)
-    : //Event{distance(start_position, end_position)},
+    :
       weapon{sprite},
       direction{direction},
       damage{damage},
-      start_position{start_position},
-      end_position{end_position},
       position{direction + start_position} {}
 
 void Fireball::execute(Engine& engine) {

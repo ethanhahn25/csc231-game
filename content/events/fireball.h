@@ -13,8 +13,6 @@ private:
     Sprite& weapon;
     Vec direction;
     int damage;
-    Vec start_position;
-    Vec end_position;
     Vec position;
     Sprite projectile;
 };

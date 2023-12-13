@@ -1,6 +1,6 @@
 #include "heros.h"
 
-#include "Move.h"
+#include "move.h"
 #include "cast_lightning.h"
 #include "closedoor.h"
 #include "engine.h"
